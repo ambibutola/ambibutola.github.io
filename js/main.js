@@ -52,11 +52,13 @@
 
         $('#contact-form').on('submit', function (e) {
             if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
+                var url = "http://ec2-13-127-29-28.ap-south-1.compute.amazonaws.com:8081/contactus/";
 
                 $.ajax({
                     type: "POST",
                     url: url,
+
+
                     data: $(this).serialize(),
                     success: function (data)
                     {
